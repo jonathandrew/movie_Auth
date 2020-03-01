@@ -61,12 +61,6 @@ app.use(
   })
 );
 
-// initialize passport module
-app.use(passport.initialize());
-
-// create session THIS MUST BE BELOW SESSION MIDDLEWARE
-app.use(passport.session());
-
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
